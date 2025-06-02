@@ -1,0 +1,45 @@
+---
+/**
+ * * About page with various sections including some text, team profiles, and CTA
+ * Edit the team member information inside src/config/teamData.json.ts
+ */
+import Badge from "@components/Badge/Badge.astro";
+import Button from "@components/Button/Button.astro";
+import CtaCenter from "@components/Cta/CtaCardBgImage.astro";
+import Profile from "@components/Profile/Profile.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+// main layout
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const teamData = getTranslatedData("teamData", currLocale);
+---
+
+<BaseLayout title="About Us" description="All about our super awesome small business team!">
+	<!-- text section -->
+	<section class="site-container mx-auto mt-16 py-20">
+		<div class="mb-16">
+			<h1 class="h1">À propos de nous</h1>
+			<div class="flex flex-col gap-4">
+			<p class="description text-lg md:text-xl">
+				Nous sommes une compagnie de la montérégie, centre du Québec, qui offre des services de développement de logiciels sur mesure pour les entreprises.
+			</p>
+			<p class="description text-lg md:text-xl">
+				Notre équipe est composée de développeurs passionnés qui sont experts dans le développement de logiciels sur mesure. Nous sommes fiers de notre expertise et de notre engagement envers nos clients.
+			</p>
+			</div>
+		</div>
+
+		<!-- Team info -->
+		<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			{
+				teamData.map((member) => (
+					<Profile name={member.name} title={member.title} image={member.image} bio={member.bio} />
+				))
+			}
+		</div>
+	</section>
+
+	<CtaCenter />
+</BaseLayout>

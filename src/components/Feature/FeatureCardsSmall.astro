@@ -1,0 +1,34 @@
+---
+import Badge from "@components/Badge/Badge.astro";
+import FeatureCard from "@components/FeatureCard/FeatureCardSmall.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const featuresData = getTranslatedData("featuresData", currLocale);
+---
+
+<section id="feature-cards-small" class="py-16 md:py-20">
+	<div class="site-container relative">
+		<div class="mx-auto mb-16 text-center md:max-w-2xl" data-aos="fade-up">
+			<Badge>{featuresData.featuresCardsSection.heading}</Badge>
+			<div class="flex justify-center">
+				<h2 class="h2 mb-4">{featuresData.featuresCardsSection.title}</h2>
+			</div>
+			<p class="description text-lg text-pretty md:text-xl">
+				{featuresData.featuresCardsSection.subtitle}
+			</p>
+		</div>
+		<div
+			id="trigger-small-cards"
+			class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+			data-aos="fade-up"
+		>
+			{
+				featuresData.featuresCardsSection.items.map((feature, idx) => (
+					<FeatureCard title={feature.title} text={feature.text} icon={feature.icon} />
+				))
+			}
+		</div>
+	</div>
+</section>

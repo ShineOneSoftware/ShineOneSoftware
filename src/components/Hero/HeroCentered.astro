@@ -1,0 +1,78 @@
+---
+/**
+ * * Hero centered with video button
+ */
+import Button from "@components/Button/Button.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { useTranslations } from "@js/translationUtils";
+import { Icon } from "astro-icon/components";
+import { getLocalizedRoute, getTranslatedData } from "@/js/translationUtils";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(currLocale);
+
+const stringsData = getTranslatedData("stringsData", currLocale);
+---
+
+<section id="hero-center" class="dark relative overflow-hidden pt-14">
+	<div class="dark:bg-dark-bg">
+		<!-- bg neon arc -->
+		<div class="absolute -inset-x-10 top-20 opacity-70 md:-inset-x-14 md:top-32 xl:-bottom-30">
+			<div class="mx-auto flex h-full w-full max-w-[1800px] items-end justify-center">
+				<Icon
+					is:inline
+					name="amplify/neon-arc"
+					aria-hidden="true"
+					class="text-primary-500 h-full w-full xl:scale-y-[1.1]"
+				/>
+			</div>
+		</div>
+
+		<!-- main content -->
+		<div class="site-container relative mx-auto px-4 pt-16 pb-12 md:pb-20">
+			<!-- alter the max-w-[750px] here until your text looks nice on large screens -->
+			<div class="mx-auto flex w-full max-w-[750px] flex-col justify-center px-4 text-center">
+				<div data-aos="fade-up" data-aos-trigger="#hero-center">
+					<!-- notification -->
+					<div class="mb-4 flex w-full items-center justify-center">
+						<a
+							href={getLocalizedRoute(currLocale, "/blog/tsconfig-paths-setup/")}
+							class="hover-border-glow border-base-200 bg-base-100 text-base-700 dark:border-base-800 dark:bg-base-950 dark:text-base-300 flex items-center rounded-full border px-4 py-1 text-sm"
+						>
+							<span class="flex items-center gap-2">
+								<Icon
+									name="amplify/amplify-logo"
+									class="text-primary-600 dark:text-primary-400 inline size-4"
+									aria-hidden="true"
+								/>{stringsData.newUpdates}</span
+							></a
+						>
+					</div>
+
+					<h1 class="h1 mb-6">
+						{t("hero_text")}
+					</h1>
+				</div>
+				<p
+					class="text-base-700 dark:text-base-300 mx-auto mb-10 mt-30 max-w-lg text-lg text-pretty"
+					data-aos="fade-up"
+					data-aos-delay=".1"
+					data-aos-trigger="#hero-center"
+				>
+					{t("hero_description")}
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<div data-aos="fade-up" data-aos-delay=".2" data-aos-trigger="#hero-center">
+						<Button
+							variant="primary"
+							href="contact"
+							rel="noopener noreferrer"
+						>
+							{t("contact")}
+						</Button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

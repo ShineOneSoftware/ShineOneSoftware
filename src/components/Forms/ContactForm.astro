@@ -1,0 +1,81 @@
+---
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+import Button from "@components/Button/Button.astro";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const contactData = getTranslatedData("contactData", currLocale);
+---
+
+<section id="contact" class="ml-auto max-w-2xl min-w-fit md:max-w-md">
+	<form id="contact-form" name="contact" class="flex flex-col gap-4">
+		<div>
+			<input type="hidden" name="form-name" value="contact" />
+			<div>
+				<div class="flex flex-col">
+					<label for="contact-fname" class="form__label sr-only">First name</label>
+					<input
+						type="text"
+						class="form__input"
+						name="fname"
+						id="contact-fname"
+						placeholder={contactData.firstName}
+						required
+					/>
+				</div>
+			</div>
+		</div>
+		<div>
+			<input type="hidden" name="form-name" value="contact" />
+			<div>
+				<div class="flex flex-col">
+					<label for="contact-lname" class="form__label sr-only">Last name</label>
+					<input
+						type="text"
+						class="form__input"
+						name="lname"
+						id="contact-lname"
+						placeholder={contactData.lastName}
+						required
+					/>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div>
+			<label for="contact-email" class="form__label sr-only mb-1">Email Address</label>
+			<input
+				type="email"
+				class="form__input"
+				name="email"
+				id="contact-email"
+				inputmode="email"
+				placeholder={contactData.email}
+				required
+			/>
+		</div>
+		<div>
+			<label for="contact-phone" class="form__label sr-only mb-1">Phone Number</label>
+			<input
+				type="tel"
+				class="form__input"
+				name="phone"
+				id="contact-phone"
+				inputmode="tel"
+				placeholder={contactData.phone}
+				required
+			/>
+		</div>
+		<div>
+			<label for="contact-services" class="form__label sr-only mb-1">Message</label>
+			<textarea
+				name="services"
+				class="form__input"
+				id="contact-services"
+				rows="4"
+				placeholder={contactData.reason}
+				required></textarea>
+		</div>
+		<Button variant="primary" type="submit" class="rounded-md before:rounded-md">{contactData.submitButtonText}</Button>
+	</form>
+</section>

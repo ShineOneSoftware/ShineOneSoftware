@@ -1,0 +1,31 @@
+{
+  "$ref": "#/definitions/codeToggles",
+  "definitions": {
+    "codeToggles": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "order"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

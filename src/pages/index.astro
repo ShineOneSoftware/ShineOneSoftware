@@ -1,0 +1,27 @@
+---
+import CtaCardBgImage from "@components/Cta/CtaCardBgImage.astro";
+import FeatureCardsSmall from "@components/Feature/FeatureCardsSmall.astro";
+import FeatureIntegrations from "@components/Feature/FeatureIntegrations.astro";
+import FeatureNumbers from "@components/Feature/FeatureNumbers.astro";
+import FeatureSteps from "@components/Feature/FeatureSteps.astro";
+import HeroCentered from "@components/Hero/HeroCentered.astro";
+import LogoCloudMarquee from "@components/LogoCloud/LogoCloudMarquee.astro";
+import PricingTable from "@components/Pricing/PricingTable.astro";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+const currLocale = getLocaleFromUrl(Astro.url);
+const siteData = getTranslatedData("siteData", currLocale);
+---
+
+<BaseLayout title={siteData.title} description={siteData.description}>
+	<HeroCentered />
+	<LogoCloudMarquee />
+	<FeatureCardsSmall />
+	<FeatureSteps />
+	<!-- <FeatureNumbers /> -->
+	<FeatureIntegrations />
+	<PricingTable />
+	<CtaCardBgImage />
+</BaseLayout>
