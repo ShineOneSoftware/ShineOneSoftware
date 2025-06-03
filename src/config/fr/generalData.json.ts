@@ -134,31 +134,28 @@ const chartData = {
 
 const processCardsData: ProcessCardItem[] = [
     {
-        title: "Connect all our contacts",
-        text: `Sync with your calendar apps and contacts. Google, Outlook, ProtonMail, and more.`,
+        title: "De l'idée à la production",
+        text: `Cycle de développement rapide et efficace qui transforme vos idées en solutions prêtes à l'emploi en un temps record.`,
     },
     {
-        title: "Dashboards for all businesses",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum, reiciendis quisquam cum sunt.`,
+        title: "Approche de développement agile",
+        text: `Processus de développement flexible et itératif avec des mises à jour régulières et des boucles de feedback pour s'assurer que votre projet reste sur la bonne voie.`,
     },
     {
-        title: "Synced to the cloud",
-        text: `Your data is accessible from everywhere, syncing across all your devices.`,
+        title: "Planification exhaustive",
+        text: `Collecte des besoins et planification détaillée pour garantir des objectifs clairs et des délais précis dès le début.`,
     },
     {
-        title: "Your business intelligence, simplified",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum.`,
+        title: "Développement axé sur la qualité",
+        text: `Tests rigoureux et contrôle de qualité à chaque étape, garantissant des solutions robustes et fiables qui répondent à vos besoins.`,
     },
     {
-        title: "Real-time insights at your fingertips",
-        text: `Data syncs across your team instantly. Real-time access, with 99.9% uptime.`,
+        title: "Support et maintenance continu",
+        text: `Support et maintenance après le déploiement pour assurer que vos solutions fonctionnent sans interruption et sont mises à jour pour répondre à vos besoins actuels.`,
     },
     {
-        title: "Connects to popular apps",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum, reiciendis quisquam cum sunt.`,
+        title: "Intégration transparente",
+        text: `Expertise en intégration avec vos systèmes existants et services tiers pour un écosystème d'entreprise unifié.`,
     },
 ];
 

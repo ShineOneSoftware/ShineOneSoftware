@@ -132,31 +132,28 @@ const chartData = {
 
 const processCardsData: ProcessCardItem[] = [
     {
-        title: "Connect all our contacts",
-        text: `Sync with your calendar apps and contacts. Google, Outlook, ProtonMail, and more.`,
+        title: "From Idea to Production",
+        text: `Quick and efficient development cycle that transforms your ideas into production-ready solutions in record time.`,
     },
     {
-        title: "Dashboards for all businesses",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum, reiciendis quisquam cum sunt.`,
+        title: "Agile Development Approach",
+        text: `Flexible, iterative development process with regular updates and feedback loops to ensure your project stays on track.`,
     },
     {
-        title: "Synced to the cloud",
-        text: `Your data is accessible from everywhere, syncing across all your devices.`,
+        title: "Comprehensive Planning",
+        text: `Thorough requirements gathering and detailed project planning to ensure clear objectives and timelines from day one.`,
     },
     {
-        title: "Your business intelligence, simplified",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum.`,
+        title: "Quality-Driven Development",
+        text: `Rigorous testing and quality assurance at every stage, ensuring robust and reliable solutions that meet your needs.`,
     },
     {
-        title: "Real-time insights at your fingertips",
-        text: `Data syncs across your team instantly. Real-time access, with 99.9% uptime.`,
+        title: "Continuous Support & Maintenance",
+        text: `Dedicated post-launch support and maintenance services to keep your solutions running smoothly and up-to-date.`,
     },
     {
-        title: "Connects to popular apps",
-        text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam delectus
-            rerum, reiciendis quisquam cum sunt.`,
+        title: "Seamless Integration",
+        text: `Expert integration with your existing systems and third-party services for a unified business ecosystem.`,
     },
 ];
 
