@@ -70,7 +70,7 @@ export const textTranslations = {
 	en: {
 		hero_text: "Amplify your digital presence",
 		hero_description:
-			"Designs that shine, websites that work. Fully leverage your online presence with high-performing, adaptable websites designed to grow with your needs.",
+			"Designs that shine, software that works. Fully leverage your online presence with high-performing, adaptable software designed to grow with your needs.",
 		back_to_all_posts: "Back to all posts",
 		updated: "Updated",
 		contact: "Contact Us",
@@ -78,7 +78,7 @@ export const textTranslations = {
 	fr: {
 		hero_text: "Amplifiez votre présence numérique",
 		hero_description:
-			"Des designs qui brillent, des sites qui fonctionnent. Exploitez pleinement votre présence en ligne avec des sites web performants et adaptables, conçus pour évoluer selon vos exigences.",
+			"Des designs qui brillent, des logiciels qui fonctionnent. Exploitez pleinement votre présence en ligne avec des logiciels performants et adaptables, conçus pour évoluer selon vos exigences.",
 		back_to_all_posts: "Retour à tous les articles",
 		updated: "Mis à jour",
 		contact: "Nous contacter",

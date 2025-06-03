@@ -1,4 +1,4 @@
-import { type contactFormItem, type CtaItem, type faqPageItem, type FeatureIntegrationsSection, type FeaturePageItem, type FeatureStepItem, type ProcessCardItem } from "../types/configDataTypes";
+import { type contactFormItem, type CtaItem, type faqPageItem, type FeatureIntegrationsSection, type FeaturePageItem, type FeatureSideImageItem, type FeatureStepItem, type ProcessCardItem } from "../types/configDataTypes";
 
 const contactData: contactFormItem = {
     title: "Contact Us",
@@ -157,6 +157,25 @@ const processCardsData: ProcessCardItem[] = [
     },
 ];
 
+const featureData: FeatureSideImageItem[] = [
+    {
+        badge: "the best",
+        title: "Highest quality",
+        description:
+            "Delivering high-quality software solutions that meet your needs and exceed your expectations. We are a team of experienced developers who are dedicated to delivering the best possible software solutions for your business.",
+        href: "/contact",
+        buttonText: "Get Started",
+    },
+    {
+        badge: "around",
+        title: "Guaranteed satisfaction",
+        description:
+            "Client satisfaction is our top priority. We are committed to delivering software solutions that meet your needs and exceed your expectations.",
+        href: "/contact",
+        buttonText: "Get Started",
+    },
+];
+
 const stringsData = {
     newUpdates: "Latest Post!",
     simplifiedProcess: "Simplified process to get your project done"
@@ -172,4 +191,5 @@ export {
     chartData,
     stringsData,
     processCardsData,
+    featureData,
 };

@@ -2,7 +2,6 @@
 import CtaCardBgImage from "@components/Cta/CtaCardBgImage.astro";
 import FeatureCardsSmall from "@components/Feature/FeatureCardsSmall.astro";
 import ProcessCards from "@components/Feature/ProcessCards.astro";
-import FeatureIntegrations from "@components/Feature/FeatureIntegrations.astro";
 import FeatureSteps from "@components/Feature/FeatureSteps.astro";
 import HeroCentered from "@components/Hero/HeroCentered.astro";
 import LogoCloudMarquee from "@components/LogoCloud/LogoCloudMarquee.astro";
@@ -10,6 +9,7 @@ import PricingTable from "@components/Pricing/PricingTable.astro";
 import { getLocaleFromUrl } from "@js/localeUtils";
 import { getTranslatedData } from "@js/translationUtils";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import FeatureSideImage from "@components/Feature/FeatureSideImage.astro";
 
 const currLocale = getLocaleFromUrl(Astro.url);
 const siteData = getTranslatedData("siteData", currLocale);
@@ -19,9 +19,9 @@ const siteData = getTranslatedData("siteData", currLocale);
 	<HeroCentered />
 	<LogoCloudMarquee />
 	<FeatureCardsSmall />
+	<FeatureSideImage />
 	<ProcessCards />
 	<FeatureSteps />
-	<FeatureIntegrations />
 	<PricingTable />
 	<CtaCardBgImage />
 </BaseLayout>

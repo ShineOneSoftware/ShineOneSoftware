@@ -53,7 +53,9 @@ type LogosIcon =
 	| "logos/sanity"
 	| "logos/contentfull"
 	| "logos/github"
-	| "logos/notion";
+	| "logos/notion"
+	| "logos/shopify"
+	| "logos/webflow";
 
 // Combined icon type
 export type IconName = TablerIcon | AmplifyIcon | LogosIcon;
@@ -183,6 +185,14 @@ export interface FeatureIntegrationsSection {
 export interface ProcessCardItem {
 	title: string;
 	text: string;
+}
+
+export interface FeatureSideImageItem {
+	badge: string;
+	title: string;
+	description: string;
+	href: string;
+	buttonText: string;
 }
 
 // --------------------------------------------------------

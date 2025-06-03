@@ -3,49 +3,21 @@
  * * These are alternating side cards with titles, text, and images
  * Recommend using 2 or 3 cards in a row
  */
-import Badge from "@components/Badge/Badge.astro";
 import FeatureCard from "@components/FeatureCard/FeatureCardSideImage.astro";
 // images
 import image1 from "@images/abstract-1.jpg";
 import image2 from "@images/storm-2.webp";
-import { Icon } from "astro-icon/components";
+import { getLocaleFromUrl } from "@js/localeUtils";
+import { getTranslatedData } from "@js/translationUtils";
 
-interface FeatureItem {
-	badge: string; // badge text
-	image: ImageMetadata; // an imported image
-	title: string;
-	description: string;
-	href: string; // link to learn more
-	buttonText: string; // button text
-}
+const currLocale = getLocaleFromUrl(Astro.url);
+const featureData = getTranslatedData("featureData", currLocale);
 
-const featureData: FeatureItem[] = [
-	{
-		badge: "the best",
-		image: image1,
-		title: "Highest quality",
-		description:
-			"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		href: "/contact",
-		buttonText: "Get Started",
-	},
-	{
-		badge: "around",
-		image: image2,
-		title: "Guaranteed satisfaction",
-		description:
-			"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-		href: "/contact",
-		buttonText: "Get Started",
-	},
-];
+const images = [image1, image2];
 ---
 
 <section id="feature-side-image" class="my-12 overflow-hidden py-12">
 	<div class="site-container">
-		<!-- <div class="mx-auto mb-16 text-center md:max-w-4xl" data-aos="fade-up">
-      <h2 class="h2 mb-4">The best choice for your needs</h2>
-    </div> -->
 		<div class="flex flex-col gap-16 md:gap-24">
 			{
 				featureData.map((feature, idx) => (
@@ -53,7 +25,7 @@ const featureData: FeatureItem[] = [
 						badge={feature.badge}
 						title={feature.title}
 						description={feature.description}
-						image={feature.image}
+						image={images[idx]}
 						imageSide={idx % 2 === 0 ? "right" : "left"}
 						href={feature.href}
 						buttonText={feature.buttonText}
