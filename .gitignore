@@ -11,8 +11,13 @@ node_modules/.vite/
 dist/
 .output/
 
-# Generated types
+# Generated types and content
 .astro/
+.astro/content-assets.mjs
+.astro/content-modules.mjs
+.astro/**/*.js
+.astro/**/*.mjs
+.astro/**/*.json
 
 # Environment variables
 .env
